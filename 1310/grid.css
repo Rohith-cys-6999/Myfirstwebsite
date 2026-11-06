@@ -1,0 +1,47 @@
+/* Base styles: designed for a small screen */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: red;
+    background: #82a8da;
+}
+
+header {
+    padding: 10px;
+    background: green;
+    color: white;
+    text-align: center;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+.card {
+    background: blue;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* At 600px or wider: use two columns */
+@media (min-width: 600px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* At 900px or wider: use three columns */
+@media (min-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
